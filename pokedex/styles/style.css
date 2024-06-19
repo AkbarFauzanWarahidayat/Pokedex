@@ -1,0 +1,317 @@
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: "Comfortaa", sans-serif;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+header{
+    display: inline;
+}
+
+/* loader */
+.pokemon-loader {
+    position: relative;
+    height: 100px;
+    width: 100px;
+    top: 40vh;
+    left: 34%;
+    background: linear-gradient(to bottom, rgb(254, 0, 1) 50%, white 50% );
+    border-radius: 50%;
+    border: 8px solid black;
+    animation: spin 1s linear infinite;
+  }
+  
+  .pokemon-loader::before {
+    content: '';
+    position: absolute;
+    height: 8px;
+    width: 100px;
+    background: black;
+    top: 50px;
+    transform: translatey(-50%);
+  }
+  
+  .pokemon-loader::after {
+    content: '';
+    position: absolute;
+    height: 38px;
+    width: 38px;
+    border-radius: 50%;
+    background: white;
+    top: 50px;
+    left: 50px;
+    transform: translate(-50%, -50%);
+    box-shadow: inset 0 0 0 8px black, inset 0 0 0 10px white, inset 0 0 0 12px black;
+  
+  }
+  
+  /* Spin Animation */
+  @keyframes spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+/* loader end */
+
+/* navbar */
+nav{
+    position: sticky;
+    top: 0;
+    background-color: white;
+    z-index: 9999;
+}
+.container-nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+
+.logo-pokemon img{
+    width: 100px;
+    height: auto;
+}
+
+.hamburger-menu i{
+    font-size: 20px;
+}
+
+.hamburger-menu button{
+    background-color: transparent;
+    border: none;
+    width: 44px;
+    height: 44px;
+}
+
+.container-menu-untuk-phone{
+    width: 100%;
+    height: 30vh;
+    padding-bottom: 20px;
+    background-color: white;
+    transform: translateY(-350px);
+    transition: transform 0.3s ease-in-out;
+}
+
+.container-menu-untuk-phone.open{
+    transform: translateY(0);
+}
+
+.container-menu-untuk-phone ul{
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+.container-menu-untuk-phone li{
+    margin-bottom: 10px;
+    padding-top: 10px;
+}
+
+.container-menu-untuk-phone a{
+    text-decoration: none;
+    color: #414141;
+    font-weight: bold;
+    display: inline-block;
+    width: 200px;
+    height: 44px;
+}
+/* navbar end */
+
+/* main */
+.container-grid-hero{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    margin-bottom: 80px;
+}
+
+.container-hero-img img{
+    width: 80%;
+    height: auto;
+    margin-left: 15%;
+    position: relative;
+    top: 40px;
+    filter: drop-shadow(0 5px 2px rgba(0, 0, 0, 0.5));
+}
+
+.container-hero-teks{
+    padding: 30px;
+    background-color: #FFCB05;
+    padding-top: 60px;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    text-align: center;
+}
+
+.container-hero-teks h1{
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.container-hero-teks p{
+    margin-bottom: 30px;
+}
+
+.container-hero-teks button{
+    border: none;
+    background: rgb(131,58,180);
+    background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
+    padding: 15px;
+    color: white;
+    border-radius: 10px;
+    font-weight: bolder;
+    margin-bottom: 20px;
+    font-family: "Comfortaa", sans-serif;
+    cursor: pointer;
+}
+
+.container-pokemon h1{
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.pagination {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 35px;
+    padding-right: 35px;
+    font-size: 10px;
+}
+
+.pagination button{
+    background-color: transparent;
+    border: none;
+    width: 44px;
+    height: 44px;
+    color: red;
+    font-family: "Comfortaa", sans-serif;
+}
+
+.container-grid-pokemon{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    padding: 25px;
+    padding-top: 10px;
+    gap: 60px;
+}
+
+.container-item-list-pokemon{
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.gambar-pokedex{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.gambar-pokedex img{
+    width: 100px;
+    height: auto;
+    filter: drop-shadow(0 5px 2px rgba(0, 0, 0, 0.5));
+}
+
+.nama-pokemon{
+    text-align: center;
+}
+
+.nama-pokemon h4{
+    margin-bottom: 30px;
+}
+
+.nama-pokemon button{
+    padding: 10px;
+    padding-left: 25%;
+    padding-right: 25%;
+    border: none;
+    border-radius: 10px;
+    background-color: rgb(29, 29, 29);
+    color: white;
+    font-family: "Comfortaa", sans-serif;
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.nama-pokemon button:hover{
+   background: rgb(2,0,36);
+   background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(121,9,9,1) 35%, rgba(0,212,255,1) 100%);
+}
+
+/* main end */
+
+/* fitur detail */
+.container-detail-pokemon{
+    margin-top: 30px;
+}
+
+.container-nama{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    color: white;
+    margin: 0;
+}
+
+.container-nama h1{
+    margin-bottom: 20px;
+}
+
+.grid-detail-pokemon{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+}
+
+.gambar-detail-pokemon{
+    display: flex;
+    justify-content: center;
+}
+
+.gambar-detail-pokemon img{
+    width: 220px;
+    height: auto;
+    filter: drop-shadow(0 5px 2px rgba(0, 0, 0, 0.5));
+    position: relative;
+    top: 55px;
+}
+
+.desc-detail-pokemon{
+    background-color: white;
+    margin: 0;
+    padding-top: 140px;
+    height: 50vh;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+/* fitur detail end */
+
+
+@media screen and (min-width: 768px){
+    .container-grid-pokemon{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .container-item-list-pokemon{
+        padding: 40px;
+    }
+
+    .container-grid-hero{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .container-hero-img img{
+        position: static;
+    }
+}
